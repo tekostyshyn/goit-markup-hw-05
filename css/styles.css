@@ -124,6 +124,8 @@ img {
 }
 
 .site-nav-link {
+  display: inline-flex;
+  position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -133,6 +135,17 @@ img {
   font-size: 14px;
   line-height: 1.17;
   letter-spacing: 0.02em;
+}
+
+.site-nav-link.current::after {
+  position: absolute;
+  bottom: 0;
+
+  content: "";
+  background-color: var(--accent-color);
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
 }
 
 .site-nav-link:hover,
